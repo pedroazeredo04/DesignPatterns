@@ -1,0 +1,6 @@
+c1_DuckSim/build/*
+!c1_DuckSim/build/CMakeFiles/.gitkeep
+c2_WeatherStation/build
+c3_StarBuzzCoffee/build
+c4_PizzaStore/build
+tests
