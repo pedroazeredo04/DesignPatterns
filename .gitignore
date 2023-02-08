@@ -1,9 +1,9 @@
-c1_DuckSim/build/*
-!c1_DuckSim/build/.gitkeep
-c2_WeatherStation/build/*
-!c2_WeatherStation/build/.gitkeep
-c3_StarBuzzCoffee/build/*
-!c3_StarBuzzCoffee/build/.gitkeep
-c4_PizzaStore/build/*
-!c4_PizzaStore/build/.gitkeep
+c1_Strategy/build/*
+!c1_Strategy/build/.gitkeep
+c2_Observer/build/*
+!c2_Observer/build/.gitkeep
+c3_Decorator/build/*
+!c3_Decorator/build/.gitkeep
+c4_Factory/build/*
+!c4_Factory/build/.gitkeep
 tests
