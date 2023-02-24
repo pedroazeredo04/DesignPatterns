@@ -4,7 +4,7 @@
 
 ---
 
-This repository contains my solutions in C++ to the problems of each chapter presented in the book [Head First Design Patterns](https://www.amazon.com.br/Head-First-Design-Patterns-Object-Oriented/dp/149207800X/ref=pd_lpo_2?pd_rd_i=149207800X&psc=1) by Eric Freeman & Elisabeth Robson [(better pricing here)](https://libgen.li/edition.php?id=138628923).
+This repository contains my solutions in C++ to the problems of each chapter presented in the book [Head First Design Patterns](https://www.amazon.com.br/Head-First-Design-Patterns-Object-Oriented/dp/149207800X/ref=pd_lpo_2?pd_rd_i=149207800X&psc=1) by Eric Freeman & Elisabeth Robson
 
 **Note**: these solutions are *not!* necessarily the most efficient or most precise way of handling the translations to C++.
 
