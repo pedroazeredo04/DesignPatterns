@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 ## Define qual o nome do projeto
-project(DuckSim)
+project(DuckSim CXX)
 
 ## Adiciona o diretório inc na lista de pastas a procurar
 # por arquivos .h
