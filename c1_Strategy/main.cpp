@@ -9,6 +9,10 @@ int main() {
     RubberDuck duckDluffy;
 
     
+    std::cout << std::endl << "MALLARD" << std::endl;
+    dumbduck.performFly();
+    dumbduck.performQuack();
+
     std::cout << std::endl << "RUBBER" << std::endl;
     duckDluffy.performFly();
     duckDluffy.performQuack();
@@ -17,9 +21,6 @@ int main() {
     spruceduck.performFly();
     spruceduck.performQuack();
     
-    std::cout << std::endl << "MALLARD" << std::endl;
-    dumbduck.performFly();
-    dumbduck.performQuack();
 
 
     return 0;
