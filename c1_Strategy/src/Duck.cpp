@@ -1,18 +1,10 @@
 #include "Duck.h"
 
-// Duck superclass functions
-Duck::~Duck() {
-    delete this->flyBehavior_ptr;
-    delete this->quackBehavior_ptr;
-    // there's need for a destructor because we're using "new" to set the behavior_ptrs
-    // @see smart pointers
-}
-
-void Duck::set_quackBehavior(QuackBehavior* qb) {
+void Duck::set_quackBehavior(std::shared_ptr<QuackBehavior> qb) {
     this->quackBehavior_ptr = qb;
 }
 
-void Duck::set_flyBehavior(FlyBehavior* fb) {
+void Duck::set_flyBehavior(std::shared_ptr<FlyBehavior> fb) {
     this->flyBehavior_ptr = fb;
 }
 
@@ -28,8 +20,11 @@ void Duck::display() { }
 
 // Duck child classes functions
 MallarDuck::MallarDuck() {
-    set_flyBehavior(new FlyWithWings());
-    set_quackBehavior(new Quack());
+    std::shared_ptr<FlyBehavior> mallard_fly {new FlyWithWings()};
+    std::shared_ptr<QuackBehavior> mallard_quack {new Quack()};
+
+    set_flyBehavior(mallard_fly);
+    set_quackBehavior(mallard_quack);
 }
 
 void MallarDuck::display() {
@@ -38,8 +33,11 @@ void MallarDuck::display() {
 
 
 RubberDuck::RubberDuck() {
-    set_flyBehavior(new FlyNoWay());
-    set_quackBehavior(new Squeak());
+    std::shared_ptr<FlyBehavior> rubber_fly {new FlyNoWay()};
+    std::shared_ptr<QuackBehavior> rubber_quack {new Squeak()};
+
+    set_flyBehavior(rubber_fly);
+    set_quackBehavior(rubber_quack);
 }
 
 void RubberDuck::display() {
@@ -48,8 +46,11 @@ void RubberDuck::display() {
 
 
 WoodenDuck::WoodenDuck() {
-    set_flyBehavior(new FlyNoWay());
-    set_quackBehavior(new MuteSqueak());
+    std::shared_ptr<FlyBehavior> wooden_fly {new FlyNoWay()};
+    std::shared_ptr<QuackBehavior> wooden_quack {new MuteSqueak()};
+
+    set_flyBehavior(wooden_fly);
+    set_quackBehavior(wooden_quack);
 }
 
 void WoodenDuck::display() {

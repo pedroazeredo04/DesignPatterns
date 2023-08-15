@@ -2,22 +2,23 @@
 #define __DUCK_H__
 
 #include <iostream>
+#include <memory>
+
 #include "FlyBehavior.h"
 #include "QuackBehavior.h"
 
 class Duck {
     public:
-        ~Duck();
-        void set_quackBehavior(QuackBehavior* qb);
-        void set_flyBehavior(FlyBehavior* fb);
+        void set_quackBehavior(std::shared_ptr<QuackBehavior> qb);
+        void set_flyBehavior(std::shared_ptr<FlyBehavior> fb);
 
         void performFly();
         void performQuack();
         virtual void display();
 
     private:
-        FlyBehavior* flyBehavior_ptr;
-        QuackBehavior* quackBehavior_ptr;
+        std::shared_ptr<FlyBehavior> flyBehavior_ptr;
+        std::shared_ptr<QuackBehavior> quackBehavior_ptr;
 };
 
 
